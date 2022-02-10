@@ -39,7 +39,7 @@ class MyFriend
         Gender = _gender;
     }
 } 
-
+```
 Serailize 활용, 기본 저장 코드 (쓰기)
 ```
 HumanSeri Hong = new HumanSeri("홍길동", 28);
@@ -52,6 +52,7 @@ SoapFormatter sf = new SoapFormatter();
 sf.Serialize(fs, Hong);
 fs.Close();
 ```
+
 DeSerailize 활용, 기본 불러오기 코드 (열기)
 ```
 FileStream fs = new FileStream(@"c:\Temp\HongSeri.dat",   // file path
