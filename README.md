@@ -44,12 +44,12 @@ Serailize 활용, 기본 저장 코드 (쓰기)
 ```
 HumanSeri Hong = new HumanSeri("홍길동", 28);
 
-FileStream fs = new FileStream(@"c:\Temp\HongSoap.dat",   // file path
-                                FileMode.Create,          // file mode
-                                FileAccess.Write);        // file access
-SoapFormatter sf = new SoapFormatter();
+FileStream fs = new FileStream(@"c:\Temp\HongSeri.dat",   // file path
+                                FileMode.Create,    // file mode
+                                FileAccess.Write);  // file access
+BinaryFormatter bf = new BinaryFormatter();
 
-sf.Serialize(fs, Hong);
+bf.Serialize(fs, Hong);
 fs.Close();
 ```
 
